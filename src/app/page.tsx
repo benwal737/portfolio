@@ -1,111 +1,89 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Mail, Code, Database, Globe } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiPostgresql,
+  SiGit,
+} from "react-icons/si";
 import Link from "next/link";
 
 export default function Home() {
-  const skills = [
+  const technologies = [
+    { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
     {
-      category: "Frontend",
-      icon: Globe,
-      technologies: [
-        "React",
-        "Next.js",
-        "JavaScript",
-        "TypeScript",
-        "Tailwind CSS",
-        "HTML5",
-        "CSS3",
-      ],
+      name: "Next.js",
+      icon: <RiNextjsFill className="text-black dark:text-white" />,
     },
-    {
-      category: "Backend",
-      icon: Database,
-      technologies: [
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "MongoDB",
-        "REST APIs",
-        "GraphQL",
-      ],
-    },
-    {
-      category: "Development",
-      icon: Code,
-      technologies: [
-        "Git",
-        "Docker",
-        "AWS",
-        "Vercel",
-        "Vitest",
-        "MSW",
-        "React Testing Library",
-        "Puppeteer",
-      ],
-    },
+    { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
+    { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+    { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
+    { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
   ];
 
   return (
-    <div className="h-[calc(100vh-4rem)] flex flex-col md:overflow-hidden">
-      <main className="container mx-auto px-5 md:px-20 py-5 flex-1 flex flex-col justify-center">
-        <div className="space-y-20">
+    <div className="h-[calc(100vh-4rem)] flex flex-col overflow-hidden">
+      <main className="container mx-auto px-5 md:px-20 py-8 flex-1 flex flex-col justify-center">
+        <div className="space-y-16">
           <section className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hi, I'm <span className="whitespace-nowrap">Ben Walderman</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto">
-              full-stack developer creating beautiful, functional web
-              applications
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <Button size="lg">
-                  <Mail className="size-4" />
-                  Get in Touch
-                </Button>
-              </Link>
-              <Link href="/projects">
-                <Button variant="outline" size="lg">
-                  View Projects
-                </Button>
-              </Link>
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                Hi, I'm <span className="whitespace-nowrap">Ben Walderman</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Full-stack developer creating beautiful, functional web
+                applications
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 pt-2">
+                <Link href="/contact">
+                  <Button size="lg" className="px-6 py-3 font-medium">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Get in Touch
+                  </Button>
+                </Link>
+                <Link href="/projects">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="px-6 py-3 font-medium"
+                  >
+                    View Projects
+                  </Button>
+                </Link>
+              </div>
             </div>
           </section>
 
           <section>
-            <h2 className="text-3xl font-bold text-center mb-3">
-              Technologies I Use
-            </h2>
-            <p className="text-center text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Here are some of the tools and technologies that I enjoy working
-              with
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-              {skills.map((skill, index) => (
-                <Card key={index}>
-                  <CardContent className="">
-                    <div className="flex items-center gap-2 mb-6">
-                      <skill.icon className="h-5 w-5" />
-                      <h3 className="text-lg font-semibold">
-                        {skill.category}
-                      </h3>
+            <div className="text-center space-y-8">
+              <div className="space-y-2">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  Technologies I Use
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
+                  Here are some of the tools and technologies I enjoy working
+                  with
+                </p>
+              </div>
+              <div className="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-6 max-w-4xl mx-auto">
+                {technologies.map((tech, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center group cursor-default"
+                  >
+                    <div className="text-3xl md:text-4xl mb-2 md:mb-3 p-3 md:p-4 bg-card border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-105 group-hover:border-primary/20">
+                      {tech.icon}
                     </div>
-                    <div className="flex flex-wrap gap-2">
-                      {skill.technologies.map((tech, techIndex) => (
-                        <Badge
-                          key={techIndex}
-                          variant="default"
-                          className="text-xs"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    <span className="text-xs md:text-sm font-medium text-center leading-tight">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
         </div>
