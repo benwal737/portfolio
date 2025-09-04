@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="px-5 md:px-20 flex h-16 items-center justify-between gap-4 border-b w-full bg-background z-50 sticky top-0">
       <Link href="/">
-        <h1 className="text-lg md:text-2xl font-bold w-50">
+        <h1 className="text-lg md:text-2xl font-bold w-60">
           Ben Walderman<span className="text-primary ml-1">.</span>
         </h1>
       </Link>
@@ -41,7 +41,7 @@ const Header = () => {
           Contact
         </Button>
       </div>
-      <div className="flex justify-end w-50">
+      <div className="flex justify-end w-60">
         <ModeToggle />
       </div>
     </header>

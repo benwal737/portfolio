@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws, FaPython } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import {
   SiTypescript,
@@ -23,6 +23,7 @@ export default function Home() {
     { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
     { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
     { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
+    // { name: "Python", icon: <FaPython className="text-[#FFD43B]" /> },
   ];
 
   return (
@@ -60,15 +61,9 @@ export default function Home() {
 
           <section>
             <div className="text-center space-y-8">
-              <div className="space-y-2">
-                <h2 className="text-2xl md:text-3xl font-bold">
-                  Technologies I Use
-                </h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
-                  Here are some of the tools and technologies I enjoy working
-                  with
-                </p>
-              </div>
+              <p className="text-muted-foreground text-base md:text-lg">
+                Here are some of the tools and technologies I enjoy working with
+              </p>
               <div className="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-6 max-w-4xl mx-auto">
                 {technologies.map((tech, index) => (
                   <div
