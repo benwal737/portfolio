@@ -49,19 +49,20 @@ export default function Home() {
 
   return (
     <div className="h-[calc(100vh-4rem)] flex flex-col md:overflow-hidden">
-      <main className="container mx-auto px-6 lg:px-20 py-5 flex-1 flex flex-col justify-center">
-        <div className="space-y-8">
+      <main className="container mx-auto px-5 md:px-20 py-5 flex-1 flex flex-col justify-center">
+        <div className="space-y-20">
           <section className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               Hi, I'm <span className="whitespace-nowrap">Ben Walderman</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              full-stack developer creating beautiful, functional web applications
+            <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto">
+              full-stack developer creating beautiful, functional web
+              applications
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact">
                 <Button size="lg">
-                  <Mail className="mr-2 h-4 w-4" />
+                  <Mail className="size-4" />
                   Get in Touch
                 </Button>
               </Link>
@@ -78,21 +79,24 @@ export default function Home() {
               Technologies I Use
             </h2>
             <p className="text-center text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Here are some of the tools and technologies that I enjoy working with
+              Here are some of the tools and technologies that I enjoy working
+              with
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {skills.map((skill, index) => (
                 <Card key={index}>
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-3 mb-3">
+                  <CardContent className="">
+                    <div className="flex items-center gap-2 mb-6">
                       <skill.icon className="h-5 w-5" />
-                      <h3 className="text-lg font-semibold">{skill.category}</h3>
+                      <h3 className="text-lg font-semibold">
+                        {skill.category}
+                      </h3>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {skill.technologies.map((tech, techIndex) => (
                         <Badge
                           key={techIndex}
-                          variant="secondary"
+                          variant="default"
                           className="text-xs"
                         >
                           {tech}

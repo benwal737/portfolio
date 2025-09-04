@@ -9,9 +9,11 @@ import Link from "next/link";
 const Header = () => {
   const router = useRouter();
   return (
-    <header className="px-4 md:px-20 flex h-16 items-center justify-between gap-4 border-b w-full bg-background z-50 sticky top-0">
+    <header className="px-5 md:px-20 flex h-16 items-center justify-between gap-4 border-b w-full bg-background z-50 sticky top-0">
       <Link href="/">
-        <h1 className="text-lg md:text-2xl font-bold w-50">Ben Walderman</h1>
+        <h1 className="text-lg md:text-2xl font-bold w-50">
+          Ben Walderman<span className="text-primary ml-1">.</span>
+        </h1>
       </Link>
       <div className="hidden md:flex">
         <Button
