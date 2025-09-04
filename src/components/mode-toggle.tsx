@@ -12,7 +12,8 @@ export function ModeToggle() {
   return (
     <Button
       variant="ghost"
-      className="rounded-full hover:cursor-pointer size-6"
+      size="icon"
+      className="rounded-full hover:cursor-pointer"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (
