@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="h-[calc(100vh-4rem)] flex flex-col overflow-hidden">
       <main className="container mx-auto px-5 md:px-20 py-8 flex-1 flex flex-col justify-center">
-        <div className="space-y-16">
+        <div className="space-y-24">
           <section className="text-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -42,7 +42,7 @@ export default function Home() {
               <div className="flex flex-wrap justify-center gap-3 pt-2">
                 <Link href="/contact">
                   <Button size="lg" className="px-6 py-3 font-medium">
-                    <Mail className="w-4 h-4 mr-2" />
+                    <Mail className="mr-1"/>
                     Get in Touch
                   </Button>
                 </Link>
