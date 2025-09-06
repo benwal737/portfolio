@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { FaReact, FaNodeJs, FaAws, FaPython } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import {
@@ -7,6 +8,7 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiGit,
+  SiLinkedin,
 } from "react-icons/si";
 import Link from "next/link";
 import SplitText from "@/components/SplitText";
@@ -59,7 +61,6 @@ export default function Home() {
               <div className="flex flex-wrap justify-center gap-3 pt-2">
                 <Link href="/contact">
                   <Button size="lg" className="px-6 py-3 font-medium">
-                    <Mail className="mr-1" />
                     Get in Touch
                   </Button>
                 </Link>
@@ -69,9 +70,44 @@ export default function Home() {
                     size="lg"
                     className="px-6 py-3 font-medium"
                   >
-                    View Projects
+                    View My Work
                   </Button>
                 </Link>
+              </div>
+              
+              {/* Contact Links */}
+              <div className="flex justify-center gap-4 border-t border-muted/20">
+                <Button asChild variant="ghost" size="sm" className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300">
+                  <Link 
+                    href="mailto:benlwalderman@gmail.com"
+                    className="flex items-center justify-center"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span className="sr-only">Email</span>
+                  </Link>
+                </Button>
+                <Button asChild variant="ghost" size="sm" className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300">
+                  <Link 
+                    href="https://linkedin.com/in/benwalderman"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    <SiLinkedin className="w-5 h-5" />
+                    <span className="sr-only">LinkedIn</span>
+                  </Link>
+                </Button>
+                <Button asChild variant="ghost" size="sm" className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300">
+                  <Link 
+                    href="https://github.com/benwal737"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    <FaGithub className="w-5 h-5" />
+                    <span className="sr-only">GitHub</span>
+                  </Link>
+                </Button>
               </div>
             </div>
           </section>
