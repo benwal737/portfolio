@@ -9,6 +9,7 @@ import {
   SiGit,
 } from "react-icons/si";
 import Link from "next/link";
+import SplitText from "@/components/SplitText";
 
 export default function Home() {
   const technologies = [
@@ -27,12 +28,28 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-[calc(100vh-4rem)] flex flex-col overflow-hidden">
+    <div className="h-[calc(100vh-4rem)] flex flex-col overflow-auto">
       <main className="container mx-auto px-5 md:px-20 py-8 flex-1 flex flex-col justify-center">
         <div className="space-y-24">
           <section className="text-center">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+              <div className="hidden md:block">
+                <SplitText
+                  text={`Hi, I'm Ben Walderman`}
+                  className="text-4xl md:text-6xl font-bold tracking-tight"
+                  delay={100}
+                  duration={0.6}
+                  ease="power3.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="-100px"
+                  textAlign="center"
+                />
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight block md:hidden">
                 Hi, I'm <span className="whitespace-nowrap">Ben Walderman</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -42,7 +59,7 @@ export default function Home() {
               <div className="flex flex-wrap justify-center gap-3 pt-2">
                 <Link href="/contact">
                   <Button size="lg" className="px-6 py-3 font-medium">
-                    <Mail className="mr-1"/>
+                    <Mail className="mr-1" />
                     Get in Touch
                   </Button>
                 </Link>
