@@ -4,14 +4,34 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Carousel from "@/components/Carousel";
 import FadeContent from "@/components/FadeContent";
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   const projects = [
     {
       title: "SlugTrail",
       subtitle: "Parking Solutions Platform",
-      description:
-        "A comprehensive campus parking system with three role-specific applications (Driver, Enforcement, Admin) featuring secure authentication, payment processing, and automated license plate recognition.",
+      description: (
+        <>
+          <p className="mb-3">
+            First place winner in UCSC&apos;s capstone competition. Full-stack parking ecosystem with role-specific apps for drivers, enforcement, and admins.
+          </p>
+
+          <p className="font-semibold text-sm mb-1.5">Key Features:</p>
+          <ul className="list-disc pl-5 space-y-0.5 mb-3 text-sm">
+            <li>Permit management and vehicle registration</li>
+            <li>Automated license plate recognition (OCR)</li>
+            <li>Ticket processing and Stripe payments</li>
+            <li>Zone-based pricing management</li>
+          </ul>
+
+          <p className="font-semibold text-sm mb-1.5">Architecture:</p>
+          <ul className="list-disc pl-5 space-y-0.5 text-sm">
+            <li>9 GraphQL microservices</li>
+            <li>Dedicated PostgreSQL databases per service</li>
+          </ul>
+        </>
+      ),
       images: [
         { src: "/landing.png", alt: "Landing", id: 1 },
         { src: "/admin.png", alt: "Admin", id: 2 },
@@ -36,8 +56,27 @@ export default function Projects() {
     {
       title: "Werewolf",
       subtitle: "Multiplayer Web Game",
-      description:
-        "A browser-based social deduction game with real-time multiplayer gameplay, dynamic role-driven UI, and synchronized game state management across multiple players.",
+      description: (
+        <>
+          <p className="mb-3">
+            Browser-based social deduction game with real-time multiplayer gameplay and role-driven mechanics.
+          </p>
+
+          <p className="font-semibold text-sm mb-1.5">Key Features:</p>
+          <ul className="list-disc pl-5 space-y-0.5 mb-3 text-sm">
+            <li>Real-time multiplayer with synchronized game state</li>
+            <li>Dynamic UI that adapts to player roles and game phases</li>
+            <li>Live game chat and player actions</li>
+            <li>Responsive design with conditional rendering</li>
+          </ul>
+
+          <p className="font-semibold text-sm mb-1.5">Technical Stack:</p>
+          <ul className="list-disc pl-5 space-y-0.5 text-sm">
+            <li>Socket.IO WebSocket backend for real-time sync</li>
+            <li>shadcn UI components with Tailwind CSS</li>
+          </ul>
+        </>
+      ),
       images: [
         { src: "/werewolf-home.png", alt: "Home", id: 1 },
         { src: "/lobby.png", alt: "Lobby", id: 2 },
@@ -53,36 +92,6 @@ export default function Projects() {
       demo: "https://playwerewolf.online",
       category: "Web App",
       period: "June - August 2025",
-      openSource: true,
-    },
-    {
-      title: "Apokatastasis",
-      subtitle: "Multi-POV Streaming Platform",
-      description:
-        "A cutting-edge streaming platform enabling multiple perspective viewing with real-time video streaming, interactive chat, and synchronized multi-user experiences.",
-      images: [
-        {
-          src: "/api/placeholder/400/240",
-          alt: "Multi-Stream Interface",
-          id: 1,
-        },
-        { src: "/api/placeholder/400/240", alt: "Chat Integration", id: 2 },
-        { src: "/api/placeholder/400/240", alt: "Stream Controls", id: 3 },
-      ],
-      technologies: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "PostgreSQL",
-        "LiveKit",
-        "WebRTC",
-        "Socket.IO",
-        "Tailwind CSS",
-      ],
-      github: "https://github.com/benwal737/apokatastasis",
-      demo: "https://apokatastasislive.netlify.app",
-      category: "Full Stack",
-      period: "In Progress",
       openSource: true,
     },
   ];
@@ -136,9 +145,9 @@ export default function Projects() {
 
                   {/* Content */}
                   <div className="space-y-4 px-2">
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <div className="text-muted-foreground text-sm leading-relaxed">
                       {project.description}
-                    </p>
+                    </div>
 
                     {/* Technologies */}
                     <div className="space-y-2">
@@ -167,7 +176,7 @@ export default function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
+                            <ExternalLink className="w-4 h-4" />
                             Live Demo
                           </Link>
                         </Button>
@@ -183,7 +192,7 @@ export default function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
+                            <FaGithub className="w-4 h-4 " />
                             View Code
                           </Link>
                         </Button>
@@ -227,9 +236,9 @@ export default function Projects() {
                       <h3 className="text-xl font-semibold leading-tight">
                         {project.subtitle}
                       </h3>
-                      <p className="text-muted-foreground text-base leading-relaxed">
+                      <div className="text-muted-foreground text-base leading-relaxed">
                         {project.description}
-                      </p>
+                      </div>
                     </div>
 
                     {/* Technologies */}
@@ -259,7 +268,7 @@ export default function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
+                            <ExternalLink className="w-4 h-4" />
                             Live Demo
                           </Link>
                         </Button>
@@ -271,7 +280,7 @@ export default function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
+                            <FaGithub className="w-4 h-4 " />
                             View Code
                           </Link>
                         </Button>
