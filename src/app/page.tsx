@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import { FaReact, FaNodeJs, FaAws, FaPython } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import {
   SiTypescript,
@@ -52,7 +52,7 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight block md:hidden">
-                Hi, I'm <span className="whitespace-nowrap">Ben Walderman</span>
+                Hi, I&apos;m <span className="whitespace-nowrap">Ben Walderman</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Full-stack developer creating beautiful, functional web

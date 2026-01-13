@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useState, FormEvent } from "react";
 
 export default function Contact() {
@@ -69,7 +69,7 @@ export default function Contact() {
             Get in Touch
           </h1>
           <p className="text-base md:text-xl text-muted-foreground mx-auto px-4 md:px-0 max-w-2xl">
-            Let's connect and see what we can build together.
+            Let&apos;s connect and see what we can build together.
           </p>
         </section>
 

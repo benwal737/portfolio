@@ -105,7 +105,7 @@ export default function Projects() {
             My Projects
           </h1>
           <p className="text-base md:text-xl text-muted-foreground mx-auto px-4 md:px-0 max-w-2xl">
-            Here are some of the projects I've built using various technologies
+            Here are some of the projects I&apos;ve built using various technologies
             and frameworks
           </p>
         </section>
