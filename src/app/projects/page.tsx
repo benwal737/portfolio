@@ -59,7 +59,7 @@ export default function Projects() {
       description: (
         <>
           <p className="mb-3">
-            Real-time fitness app for tracking workouts with customizable templates, live set logging, and progress analytics.
+            Fitness tracking app with customizable workout templates, live set logging, and progress analytics.
           </p>
 
           <p className="font-semibold text-sm mb-1.5">Key Features:</p>
@@ -70,11 +70,11 @@ export default function Projects() {
             <li>Progress dashboard with streaks and workout history</li>
           </ul>
 
-          <p className="font-semibold text-sm mb-1.5">Architecture:</p>
+          <p className="font-semibold text-sm mb-1.5">Technical Stack:</p>
           <ul className="list-disc pl-5 space-y-0.5 text-sm">
-            <li>Clerk authentication with automated user onboarding via webhooks</li>
-            <li>PostgreSQL database for workout data and user profiles</li>
-            <li>Real-time state management for live workout sessions</li>
+            <li>Clerk authentication with webhook-based user onboarding</li>
+            <li>PostgreSQL database with Prisma ORM</li>
+            <li>shadcn UI components with Tailwind CSS</li>
           </ul>
         </>
       ),
