@@ -52,11 +52,11 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight block md:hidden">
-                Hi, I&apos;m <span className="whitespace-nowrap">Ben Walderman</span>
+                Hi, I&apos;m{" "}
+                <span className="whitespace-nowrap">Ben Walderman</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Full-stack developer creating beautiful, functional web
-                applications
+                Full-stack developer creating modern web applications
               </p>
               <div className="flex flex-wrap justify-center gap-3 pt-2">
                 <Link href="/contact">
@@ -74,11 +74,16 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-              
+
               {/* Contact Links */}
               <div className="flex justify-center gap-4 border-t border-muted/20">
-                <Button asChild variant="ghost" size="sm" className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300">
-                  <Link 
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300"
+                >
+                  <Link
                     href="mailto:benlwalderman@gmail.com"
                     className="flex items-center justify-center"
                   >
@@ -86,8 +91,13 @@ export default function Home() {
                     <span className="sr-only">Email</span>
                   </Link>
                 </Button>
-                <Button asChild variant="ghost" size="sm" className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300">
-                  <Link 
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300"
+                >
+                  <Link
                     href="https://linkedin.com/in/benwalderman"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -97,8 +107,13 @@ export default function Home() {
                     <span className="sr-only">LinkedIn</span>
                   </Link>
                 </Button>
-                <Button asChild variant="ghost" size="sm" className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300">
-                  <Link 
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className="h-12 w-12 rounded-full hover:bg-primary/10 transition-colors duration-300"
+                >
+                  <Link
                     href="https://github.com/benwal737"
                     target="_blank"
                     rel="noopener noreferrer"
