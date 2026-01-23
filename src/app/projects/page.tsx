@@ -54,6 +54,50 @@ export default function Projects() {
       openSource: false,
     },
     {
+      title: "Rep Radar",
+      subtitle: "Workout Tracking Platform",
+      description: (
+        <>
+          <p className="mb-3">
+            Real-time fitness app for tracking workouts with customizable templates, live set logging, and progress analytics.
+          </p>
+
+          <p className="font-semibold text-sm mb-1.5">Key Features:</p>
+          <ul className="list-disc pl-5 space-y-0.5 mb-3 text-sm">
+            <li>Live workout sessions with on-the-fly weight/rep adjustments</li>
+            <li>Smart rest timer with haptic feedback and quick presets</li>
+            <li>Reusable workout templates with exercise blocks</li>
+            <li>Progress dashboard with streaks and workout history</li>
+          </ul>
+
+          <p className="font-semibold text-sm mb-1.5">Architecture:</p>
+          <ul className="list-disc pl-5 space-y-0.5 text-sm">
+            <li>Clerk authentication with automated user onboarding via webhooks</li>
+            <li>PostgreSQL database for workout data and user profiles</li>
+            <li>Real-time state management for live workout sessions</li>
+          </ul>
+        </>
+      ),
+      images: [
+        { src: "/rep-radar-landing.png", alt: "Landing", id: 1 },
+        { src: "/rep-radar-workout.png", alt: "Workout", id: 2 },
+        { src: "/rep-radar-progress.png", alt: "Progress", id: 3 },
+      ],
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Clerk",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/benwal737/rep-radar",
+      demo: "https://rep-radar-jet.vercel.app/",
+      category: "Web App",
+      period: "",
+      openSource: true,
+    },
+    {
       title: "Werewolf",
       subtitle: "Multiplayer Web Game",
       description: (
