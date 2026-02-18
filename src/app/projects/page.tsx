@@ -14,7 +14,7 @@ export default function Projects() {
       description: (
         <>
           <p className="mb-3">
-            First place winner in UCSC&apos;s capstone competition. Full-stack parking ecosystem with role-specific apps for drivers, enforcement, and admins.
+            First place winner in UCSC&apos;s capstone competition. Microservices-based parking management system with 9 GraphQL services, each with dedicated PostgreSQL databases. Includes role-specific applications for drivers, enforcement officers, and administrators.
           </p>
 
           <p className="font-semibold text-sm mb-1.5">Key Features:</p>
@@ -27,8 +27,10 @@ export default function Projects() {
 
           <p className="font-semibold text-sm mb-1.5">Architecture:</p>
           <ul className="list-disc pl-5 space-y-0.5 text-sm">
-            <li>9 GraphQL microservices</li>
-            <li>Dedicated PostgreSQL databases per service</li>
+            <li>9 GraphQL microservices with dedicated PostgreSQL databases</li>
+            <li>CI/CD pipelines with Docker and GitLab</li>
+            <li>Deployed to Oracle Cloud Infrastructure with nginx</li>
+            <li>99% test coverage with automated testing</li>
           </ul>
         </>
       ),
@@ -39,14 +41,15 @@ export default function Projects() {
         { src: "/assistant.png", alt: "Assistant", id: 4 },
       ],
       technologies: [
-        "Next.js",
-        "React",
         "TypeScript",
+        "Node.js",
         "PostgreSQL",
         "GraphQL",
-        "Stripe",
         "Docker",
         "Oracle Cloud",
+        "Next.js",
+        "React",
+        "Stripe",
       ],
       demo: "https://slugtrail.link",
       category: "Full Stack",
@@ -72,9 +75,9 @@ export default function Projects() {
 
           <p className="font-semibold text-sm mb-1.5">Technical Stack:</p>
           <ul className="list-disc pl-5 space-y-0.5 text-sm">
+            <li>PostgreSQL database with Prisma ORM for schema design</li>
             <li>Clerk authentication with webhook-based user onboarding</li>
-            <li>PostgreSQL database with Prisma ORM</li>
-            <li>shadcn UI components with Tailwind CSS</li>
+            <li>Built with Next.js and TypeScript</li>
           </ul>
         </>
       ),
@@ -84,11 +87,11 @@ export default function Projects() {
         { src: "/rep-radar-progress.png", alt: "Progress", id: 3 },
       ],
       technologies: [
-        "Next.js",
-        "React",
         "TypeScript",
         "PostgreSQL",
         "Clerk",
+        "Next.js",
+        "React",
         "Tailwind CSS",
       ],
       github: "https://github.com/benwal737/rep-radar",
@@ -116,8 +119,9 @@ export default function Projects() {
 
           <p className="font-semibold text-sm mb-1.5">Technical Stack:</p>
           <ul className="list-disc pl-5 space-y-0.5 text-sm">
-            <li>Socket.IO WebSocket backend for real-time sync</li>
-            <li>shadcn UI components with Tailwind CSS</li>
+            <li>Socket.IO WebSocket backend managing 20+ concurrent connections</li>
+            <li>Real-time state synchronization across all players</li>
+            <li>Built with Next.js and TypeScript</li>
           </ul>
         </>
       ),
@@ -126,10 +130,11 @@ export default function Projects() {
         { src: "/lobby.png", alt: "Lobby", id: 2 },
       ],
       technologies: [
+        "TypeScript",
+        "Node.js",
+        "Socket.IO",
         "Next.js",
         "React",
-        "TypeScript",
-        "Socket.IO",
         "Tailwind CSS",
       ],
       github: "https://github.com/benwal737/werewolf",

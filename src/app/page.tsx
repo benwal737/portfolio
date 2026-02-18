@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { FaGithub, FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import {
   SiTypescript,
-  SiTailwindcss,
   SiPostgresql,
+  SiGraphql,
   SiGit,
   SiLinkedin,
 } from "react-icons/si";
@@ -15,18 +14,17 @@ import SplitText from "@/components/SplitText";
 
 export default function Home() {
   const technologies = [
+    { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
+    { name: "Docker", icon: <FaDocker className="text-[#2496ED]" /> },
+    { name: "GraphQL", icon: <SiGraphql className="text-[#E10098]" /> },
     { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
     {
       name: "Next.js",
       icon: <RiNextjsFill className="text-black dark:text-white" />,
     },
-    { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
-    { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-    { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
     { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
-    // { name: "Python", icon: <FaPython className="text-[#FFD43B]" /> },
   ];
 
   return (
@@ -56,7 +54,7 @@ export default function Home() {
                 <span className="whitespace-nowrap">Ben Walderman</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Full-stack developer creating modern web applications
+                Software engineer building scalable backend systems and full-stack applications
               </p>
               <div className="flex flex-wrap justify-center gap-3 pt-2">
                 <Link href="/contact">
